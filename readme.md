@@ -127,6 +127,22 @@ Google Cloud Run is used for deployment.
 		    get url from here, pass it to frontend code (IMPORTANT)
 
 
+# Environment Variables
+
+The following environment variables must be set before running the server. None have defaults — the app will malfunction if any required variable is missing.
+
+| Variable | Required | Description |
+|---|---|---|
+| `PORT` | Yes | Port the HTTP server listens on |
+| `GENAI_API_KEY` | Yes | Google Gemini API key |
+| `FIREBASE_PROJECT_ID` | Yes | Firebase / GCP project ID |
+| `STORAGE_BUCKET_NAME` | Yes | Google Cloud Storage bucket name |
+| `STRIPE_SECRET_KEY_DEV` | Yes (dev) | Stripe test secret key (`sk_test_...`) |
+| `STRIPE_SECRET_KEY_PROD` | Yes (prod) | Stripe live secret key (`sk_live_...`) |
+| `STRIPE_WEBHOOK_SECRET_DEV` | Yes (dev) | Stripe webhook endpoint secret for development (`whsec_...`) |
+| `STRIPE_WEBHOOK_SECRET_PROD` | Yes (prod) | Stripe webhook endpoint secret for production (`whsec_...`) |
+
+
 # Improvements
 
 ### Transcribe process improvement
